@@ -66,16 +66,29 @@ h2 {
     gap: 70px;
 }
 
-.icons {
-    display: flex;
-    width: 100%;
-  height: auto;
-  
+.icons-row {
+  display: flex;
+  justify-content: center;   /* centers the entire row */
+  align-items: center;        /* aligns icons vertically */
+  gap: 30px;                  /* spacing between icons */
+  margin-top: 20px;
+}
+
+.icon-box {
+  width: 200px;               /* uniform icon footprint */
+  height: 200px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px;
-  object-fit: contain;
 }
+
+.icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* scales icons without distortion */
+  display: block;
+}
+
 
 nav {
   background-color: #7ba8ce;
