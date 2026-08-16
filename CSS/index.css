@@ -1,0 +1,144 @@
+/* ========
+Colors
+======== */
+    /* Light Blue bccfe8 /*
+    /* Light Gray f0efec /*
+    /* Medium Blue 7ba8ce /*
+    /* Dark Blue 5579b2 /*
+    /* Grey Green a8b2aa /*
+    /* Yellow e0cd8c /*
+
+
+/* ==========
+Global Styles
+========== */
+body {
+    margin: 70px 0px;
+    padding: 0px;
+    font-size: 21px;
+    background-color: #f0efec;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 100%;
+}
+
+img {
+   max-width: 70%;
+   height: auto;
+   margin: 0px;
+}
+
+/* ==========
+Typography
+========= */
+h1 {
+    color:#f0efec;
+    font-size: 48px;
+    background-color: #5579b2;
+    text-align: center;
+    padding: 0px 20px;
+    margin: 0px;
+    width: 100%;
+
+}
+
+h2 {
+    color:#f0efec;
+    font-size: 36px;
+    background-color: #7ba8ce;
+    padding: 0px 20px;
+    margin: 0px 0px;
+    width: 100%;
+}
+
+.name-style {
+    font-weight: 800;
+    font-style: italic;
+}
+
+.about-columns {
+    display: flex;
+    margin: 0px 10px 0px 200px;
+    padding: 0px auto;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.icons-row {
+  display: flex;
+  justify-content: center;   /* centers the entire row */
+  align-items: center;        /* aligns icons vertically */
+  gap: 30px;                  /* spacing between icons */
+  margin-top: 20px;
+}
+
+.icon-box {
+  width: 200px;               /* uniform icon footprint */
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* scales icons without distortion */
+  display: block;
+}
+
+
+nav {
+  background-color: #7ba8ce;
+  padding: 2px 300px;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job {
+  margin-bottom: 0px;
+  padding: 10px 25px;
+  border: 5px solid #bccfe8;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-title {
+  font-weight: bold;
+}
+
+.job-date {
+  font-style: italic;
+  color: #666;
+}
+
+.job-description {
+  margin-top: 0px;
+}
