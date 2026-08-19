@@ -13,14 +13,14 @@ Colors
 Global Styles
 ========== */
 body {
-    margin: 70px 0px;
+    margin: 72px 0px;
     padding: 0px;
     font-size: 21px;
     background-color: #f0efec;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    width: 100%;
+    
 }
 
 img {
@@ -34,10 +34,10 @@ Typography
 ========= */
 h1 {
     color:#f0efec;
-    font-size: 48px;
+    font-size: 60px;
     background-color: #5579b2;
     text-align: center;
-    padding: 0px 20px;
+    padding:0px;
     margin: 0px;
     width: 100%;
 
@@ -47,9 +47,9 @@ h2 {
     color:#f0efec;
     font-size: 36px;
     background-color: #7ba8ce;
-    padding: 0px 20px;
-    margin: 0px 0px;
-    width: 100%;
+    padding: 0px 0px 0px 20px;
+    margin: 0px;
+    max-width: 100%;
 }
 
 .name-style {
@@ -59,11 +59,27 @@ h2 {
 
 .about-columns {
     display: flex;
-    margin: 0px 10px 0px 200px;
-    padding: 0px auto;
-    justify-content: center;
+     justify-content: center;   
     align-items: center;
-    gap: 70px;
+    width: 100%;               
+    text-align: center; 
+    margin-left: 0px;
+    width:100%;
+}
+
+#Skills li {
+    
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+#Skills ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  column-gap: 5px;
 }
 
 .icons-row {
@@ -92,14 +108,18 @@ h2 {
 
 nav {
   background-color: #7ba8ce;
-  padding: 2px 300px;
-  align-items: center;
+  padding: 2px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 50px;
+  justify-content: center;
 }
 
 nav a {
@@ -111,8 +131,10 @@ nav a {
 header {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,7 +142,7 @@ header {
 
 .job {
   margin-bottom: 0px;
-  padding: 10px 25px;
+  padding: 0px 25px;
   border: 5px solid #bccfe8;
 }
 
