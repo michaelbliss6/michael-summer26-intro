@@ -164,3 +164,59 @@ header {
 .job-description {
   margin-top: 0px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  margin: 10px;
+  background-color: #7ba8ce;
+  color: #f0efec;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #bccfe8;
+}
+
+#Messages ul {
+        color: #7ba8ce;
+    }
+
+#Messages li {
+      color: #5579b2;
+  }
+
+#Messages li a {
+color: #5579b2;
+font-weight: 600;
+text-decoration: none;
+}
+
+#Messages li a:hover {
+  text-decoration: underline;
+}
+
+#Messages li span {
+  color: #555;
+  display: block;
+  margin-top: 0.25rem;
+}
