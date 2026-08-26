@@ -32,23 +32,8 @@
     }
 
 /*MESSAGE FORM SUBMIT*/
-
-    function toggleMessagesVisibility() {
-        const messageSection = document.querySelector('#messages');
-        
-
-        if (messageList.children.length === 0) {
-            messageSection.style.display = 'none';
-        } else {
-            messageSection.style.display = 'block';
-        }
-        }
-
     
-    const messageForm = document.querySelector('form[name="leave_message"]');
-    const messageList = document.querySelector('#messages ul');
-    
-    toggleMessagesVisibility();
+const messageForm = document.querySelector('form[name="leave_message"]');
 
    messageForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -58,8 +43,12 @@
         const usersMessage = event.target.usersMessage.value;
 
         console.log(usersName, usersEmail, usersMessage);
+
+        const messageSection = document.querySelector('#messages');
+        const messageList = messageSection.querySelector('ul');
         
         const newMessage = document.createElement('li');
+        
         newMessage.innerHTML = `
             <a href="mailto:${usersEmail}">${usersName}</a>
             <span>${usersMessage}</span>
@@ -70,16 +59,12 @@
         removeButton.type = 'button';
 
         removeButton.addEventListener('click', (event) => {
-            const listItem = event.target.parentNode;
-            listItem.remove();
-            toggleMessagesVisibility();
+            const entry = event.target.parentNode;
+            entry.remove();
         });
 
         newMessage.appendChild(removeButton);
-
         messageList.appendChild(newMessage);
-
-        toggleMessagesVisibility();
 
         event.target.reset();
     });
