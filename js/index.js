@@ -63,8 +63,19 @@
         newMessage.innerHTML = `
             <a href="mailto:${usersEmail}">${usersName}</a>
             <span>${usersMessage}</span>
-            <button class="remove-btn">Remove</button>
             `;
+
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'remove';
+        removeButton.type = 'button';
+
+        removeButton.addEventListener('click', (event) => {
+            const listItem = event.target.parentNode;
+            listItem.remove();
+            toggleMessagesVisibility();
+        });
+
+        newMessage.appendChild(removeButton);
 
         messageList.appendChild(newMessage);
 
@@ -72,46 +83,3 @@
 
         event.target.reset();
     });
-
-    messageList.addEventListener('click', (event) => {
-  // EDIT clicked
-  if (event.target.classList.contains('edit-btn')) {
-    const listItem = event.target.parentElement;
-    const span = listItem.querySelector('span');
-    const currentText = span.textContent;
-
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.value = currentText;
-
-    span.replaceWith(input);
-    input.focus();
-
-    event.target.textContent = 'Save';
-    event.target.classList.remove('edit-btn');
-    event.target.classList.add('save-btn');
-  }
-
-  // SAVE clicked
-  else if (event.target.classList.contains('save-btn')) {
-    const listItem = event.target.parentElement;
-    const input = listItem.querySelector('input');
-    const newText = input.value;
-
-    const span = document.createElement('span');
-    span.textContent = newText;
-
-    input.replaceWith(span);
-
-    event.target.textContent = 'Edit';
-    event.target.classList.remove('save-btn');
-    event.target.classList.add('edit-btn');
-  }
-// REMOVE clicked
-  else if (event.target.classList.contains('remove-btn')) {
-    const listItem = event.target.parentElement;
-    listItem.remove();
-    toggleMessagesVisibility();
-  }
-
-});
