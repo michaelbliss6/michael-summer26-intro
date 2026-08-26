@@ -197,25 +197,25 @@ button[type="submit"]:hover {
   background-color: #bccfe8;
 }
 
-#Messages ul {
+#messages ul {
         color: #7ba8ce;
     }
 
-#Messages li {
+#messages li {
       color: #5579b2;
   }
 
-#Messages li a {
+#messages li a {
 color: #5579b2;
 font-weight: 600;
 text-decoration: none;
 }
 
-#Messages li a:hover {
+#messages li a:hover {
   text-decoration: underline;
 }
 
-#Messages li span {
+#messages li span {
   color: #555;
   display: block;
   margin-top: 0.25rem;
