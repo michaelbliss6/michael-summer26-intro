@@ -14,8 +14,6 @@
 
     document.body.appendChild(footer);
 
-    footer.style.margin = '20px';
-
 
 /*SKILLS*/
 
@@ -33,7 +31,7 @@
 
 /*MESSAGE FORM SUBMIT*/
     
-const messageForm = document.querySelector('form[name="leave_message"]');
+const messageForm = document.querySelector('form[name = "leave_message"]');
 
    messageForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -50,7 +48,7 @@ const messageForm = document.querySelector('form[name="leave_message"]');
         const newMessage = document.createElement('li');
         
         newMessage.innerHTML = `
-            <a href="mailto:${usersEmail}">${usersName}</a>
+            <a href = "mailto:${usersEmail}">${usersName}</a>
             <span>${usersMessage}</span>
             `;
 

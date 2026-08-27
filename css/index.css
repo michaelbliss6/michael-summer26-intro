@@ -220,3 +220,24 @@ text-decoration: none;
   display: block;
   margin-top: 0.25rem;
 }
+
+footer {
+  margin: 40px 20px;
+}
+
+@media screen and (max-width: 500px) {
+
+  header {
+
+    position: static;
+
+    margin-top: -75px;
+
+  }
+
+  nav ul {
+
+    flex-wrap: wrap;
+
+  }
+}
