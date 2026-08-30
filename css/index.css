@@ -164,3 +164,80 @@ header {
 .job-description {
   margin-top: 0px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  margin: 10px;
+  background-color: #7ba8ce;
+  color: #f0efec;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #bccfe8;
+}
+
+#messages ul {
+        color: #7ba8ce;
+    }
+
+#messages li {
+      color: #5579b2;
+  }
+
+#messages li a {
+color: #5579b2;
+font-weight: 600;
+text-decoration: none;
+}
+
+#messages li a:hover {
+  text-decoration: underline;
+}
+
+#messages li span {
+  color: #555;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+footer {
+  margin: 40px 20px;
+}
+
+@media screen and (max-width: 500px) {
+
+  header {
+
+    position: static;
+
+    margin-top: -75px;
+
+  }
+
+  nav ul {
+
+    flex-wrap: wrap;
+
+  }
+}
