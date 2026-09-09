@@ -241,3 +241,11 @@ footer {
 
   }
 }
+
+#Projects ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  column-gap: 5px;
+  font-weight: 700;
+}
