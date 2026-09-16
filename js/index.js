@@ -66,3 +66,31 @@ const messageForm = document.querySelector('form[name = "leave_message"]');
 
         event.target.reset();
     });
+    
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector('ul');
+
+    fetch('https://api.github.com/users/michaelbliss6/repos')
+        .then(response => {
+            if (!response.ok){
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.json();
+        })
+
+        .then(data => {
+            let repositories = data;
+            console.log(repositories);
+        
+        for(let i = 0; i < repositories.length; i++){
+            let project = document.createElement('li');
+            project.innerHTML = repositories[i].name;
+            projectList.appendChild(project)
+    }
+        
+        })    
+        .catch(error => {
+            console.log('Error fetching repositories', error);
+        });
+    
+    
