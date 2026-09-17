@@ -16,7 +16,7 @@ document.getElementById("get-art").addEventListener("click", function(){
             const imageUrl = `https://www.artic.edu/iiif/2/${randomPick.image_id}/full/843,/0/default.jpg`;
             document.getElementById("placeholder").src = imageUrl;
 
-            document.getElementById("medium-display").innerHTML = "";
+            document.getElementById("medium-display").innerHTML = "(Click the button below to show the art medium)";
 
             console.log(randomPick);
                 })
